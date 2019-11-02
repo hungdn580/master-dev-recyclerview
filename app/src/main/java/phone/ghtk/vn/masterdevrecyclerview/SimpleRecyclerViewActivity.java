@@ -1,5 +1,6 @@
 package phone.ghtk.vn.masterdevrecyclerview;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -22,5 +23,6 @@ public class SimpleRecyclerViewActivity extends AppCompatActivity {
         SimpleRecyclerViewAdapter simpleRecyclerViewAdapter = new SimpleRecyclerViewAdapter(simpleRecyclerViewItemArrayList);
         simpleRecyclerView.setLayoutManager(new LinearLayoutManager(this));
         simpleRecyclerView.setAdapter(simpleRecyclerViewAdapter);
+        simpleRecyclerView.setNestedScrollingEnabled(true);
     }
 }
