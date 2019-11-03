@@ -68,7 +68,6 @@ public class MainActivity extends AppCompatActivity implements IBase, IRecycler 
                         recyclerView = findViewById(R.id.rc_base);
                         recyclerView.setLayoutManager(new LinearLayoutManager(MainActivity.this, LinearLayoutManager.VERTICAL, false));
                         adapterScroll = new AdapterNestedScrollView(MainActivity.this, getDataItem());
-//                        ViewCompat.setNestedScrollingEnabled(recyclerView, false);
                         recyclerView.setHasFixedSize(true);
                         recyclerView.setNestedScrollingEnabled(false);
                         recyclerView.setAdapter(adapterScroll);
@@ -154,12 +153,7 @@ public class MainActivity extends AppCompatActivity implements IBase, IRecycler 
 
     @SuppressLint("WrongConstant")
     @Override
-    public void onClick(View view,int position) {
-//        recyclerView = findViewById(R.id.rc_base);
-//        recyclerView.setLayoutManager(new LinearLayoutManager(MainActivity.this, LinearLayoutManager.VERTICAL, false));
-//        adapterBase = new AdapterFragmentBase(MainActivity.this, new ArrayList<ItemBase>());
-//        recyclerView.setAdapter(adapterBase);
-//        Toast.makeText(MainActivity.this, "item con", Toast.LENGTH_SHORT).show();
+    public void onClick(int position) {
     }
 
 

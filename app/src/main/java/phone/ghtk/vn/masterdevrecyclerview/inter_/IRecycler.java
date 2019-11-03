@@ -7,5 +7,5 @@ import phone.ghtk.vn.masterdevrecyclerview.model.ItemBase;
 public interface IRecycler {
     int getCountItem();
     ItemBase getData(int position);
-    void onClick(View view, int position);
+    void onClick(int position);
 }

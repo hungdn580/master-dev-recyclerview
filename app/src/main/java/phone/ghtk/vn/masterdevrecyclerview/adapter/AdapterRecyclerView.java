@@ -39,15 +39,23 @@ public class AdapterRecyclerView extends RecyclerView.Adapter<AdapterRecyclerVie
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                @SuppressLint("WrongConstant") LinearLayoutManager linearLayoutManager = new LinearLayoutManager(holder.recyclerView.getContext(), LinearLayoutManager.VERTICAL, false);
-                linearLayoutManager.setInitialPrefetchItemCount(inter.getCountItem());
+                int adapterPosition = holder.getAdapterPosition();
+                data.setClick(true);
 
-                AdapterRecyclerviewChild adapterRecyclerviewChild = new AdapterRecyclerviewChild(getData());
-                holder.recyclerView.setAdapter(adapterRecyclerviewChild);
-                holder.recyclerView.setLayoutManager(linearLayoutManager);
-                holder.recyclerView.setNestedScrollingEnabled(false);
+
             }
         });
+        if (data.isClick()==true){
+            @SuppressLint("WrongConstant")
+            LinearLayoutManager linearLayoutManager = new LinearLayoutManager(holder.recyclerView.getContext(), LinearLayoutManager.VERTICAL, false);
+            linearLayoutManager.setInitialPrefetchItemCount(inter.getCountItem());
+            AdapterRecyclerviewChild adapterRecyclerviewChild = new AdapterRecyclerviewChild(getData());
+            holder.recyclerView.setAdapter(adapterRecyclerviewChild);
+            holder.recyclerView.setLayoutManager(linearLayoutManager);
+        }else {
+            holder.recyclerView.removeAllViews();
+        }
+
 
     }
 
@@ -59,7 +67,7 @@ public class AdapterRecyclerView extends RecyclerView.Adapter<AdapterRecyclerVie
     private List<ItemBase> getData() {
         itemBases = new ArrayList<>();
         for (int i = 0; i < 10; i++) {
-            ItemBase itemBase = new ItemBase(i + "");
+            ItemBase itemBase = new ItemBase( "item"+i);
             itemBases.add(i, itemBase);
         }
         return itemBases;
