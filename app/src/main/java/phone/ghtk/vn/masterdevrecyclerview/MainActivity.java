@@ -8,6 +8,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.view.ViewCompat;
 import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -67,6 +68,9 @@ public class MainActivity extends AppCompatActivity implements IBase, IRecycler 
                         recyclerView = findViewById(R.id.rc_base);
                         recyclerView.setLayoutManager(new LinearLayoutManager(MainActivity.this, LinearLayoutManager.VERTICAL, false));
                         adapterScroll = new AdapterNestedScrollView(MainActivity.this, getDataItem());
+//                        ViewCompat.setNestedScrollingEnabled(recyclerView, false);
+                        recyclerView.setHasFixedSize(true);
+                        recyclerView.setNestedScrollingEnabled(false);
                         recyclerView.setAdapter(adapterScroll);
                         Toast.makeText(MainActivity.this, "1", Toast.LENGTH_SHORT).show();
                         break;
