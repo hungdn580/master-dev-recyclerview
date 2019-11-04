@@ -18,7 +18,7 @@ public class RecyclerViewinRecyclerViewActivity extends AppCompatActivity {
     protected void onCreate (Bundle savedInstanceState) {
         super.onCreate (savedInstanceState);
         setContentView (R.layout.activity_recycler_viewin_recycler_view);
-        RecyclerView rvItem = findViewById(R.id.rv_item);
+        RecyclerView  rvItem = findViewById(R.id.rv_item);
         LinearLayoutManager layoutManager = new LinearLayoutManager(RecyclerViewinRecyclerViewActivity.this);
         ItemAdapter itemAdapter = new ItemAdapter(buildItemList());
         rvItem.setAdapter(itemAdapter);
