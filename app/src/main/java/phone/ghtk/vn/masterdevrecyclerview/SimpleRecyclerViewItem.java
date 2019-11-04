@@ -14,4 +14,5 @@ public class SimpleRecyclerViewItem {
     public void setmName(String mName) {
         this.mName = mName;
     }
+
 }

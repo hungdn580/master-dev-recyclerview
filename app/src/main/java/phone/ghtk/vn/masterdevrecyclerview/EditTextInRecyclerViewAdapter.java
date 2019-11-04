@@ -14,6 +14,7 @@ import java.util.ArrayList;
 public class EditTextInRecyclerViewAdapter extends RecyclerView.Adapter<EditTextInRecyclerViewAdapter.MyViewHolder> {
     ArrayList<SimpleRecyclerViewItem> simpleRecyclerViewItemArrayList;
 
+
     public EditTextInRecyclerViewAdapter(ArrayList<SimpleRecyclerViewItem> simpleRecyclerViewItemArrayList) {
         this.simpleRecyclerViewItemArrayList = simpleRecyclerViewItemArrayList;
     }
@@ -38,11 +39,28 @@ public class EditTextInRecyclerViewAdapter extends RecyclerView.Adapter<EditText
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
-        int position;
+        //int position;
         EditText etItem;
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
             etItem = itemView.findViewById(R.id.etItem);
+            etItem.addTextChangedListener(new TextWatcher() {
+                @Override
+                public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+                }
+
+                @Override
+                public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+                    simpleRecyclerViewItemArrayList.get(getAdapterPosition()).setmName(etItem.getText().toString());
+
+                }
+
+                @Override
+                public void afterTextChanged(Editable editable) {
+
+                }
+            });
 
         }
     }

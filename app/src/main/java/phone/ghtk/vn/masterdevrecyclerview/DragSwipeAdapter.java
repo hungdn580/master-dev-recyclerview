@@ -17,6 +17,7 @@ public class DragSwipeAdapter extends RecyclerView.Adapter<DragSwipeAdapter.MyVi
 
     public DragSwipeAdapter(ArrayList<SimpleRecyclerViewItem> simpleRecyclerViewItemArrayList) {
         this.simpleRecyclerViewItemArrayList = simpleRecyclerViewItemArrayList;
+
     }
 
     @NonNull

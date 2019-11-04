@@ -7,22 +7,20 @@ import android.support.v7.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-public class EditTextInActivity extends AppCompatActivity {
+public class MultiLevelActivity extends AppCompatActivity {
     RecyclerView recyclerView;
     ArrayList<SimpleRecyclerViewItem> simpleRecyclerViewItemArrayList;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.edit_text_in_recycler_view);
-        recyclerView = (RecyclerView) findViewById(R.id.rvEdt);
+        setContentView(R.layout.activity_multi_level);
+        recyclerView = (RecyclerView) findViewById(R.id.rvParent);
         simpleRecyclerViewItemArrayList = new ArrayList<>();
-        for (int i = 0; i < 1000; i++) {
-            simpleRecyclerViewItemArrayList.add(new SimpleRecyclerViewItem(""));
+        for (int i = 0; i < 30; i++) {
+            simpleRecyclerViewItemArrayList.add(new SimpleRecyclerViewItem("Item" + i));
         }
-        EditTextInRecyclerViewAdapter editTextInRecyclerViewAdapter = new EditTextInRecyclerViewAdapter(simpleRecyclerViewItemArrayList);
+        ParentMultiLevelAdapter parentMultiLevelAdapter = new ParentMultiLevelAdapter(simpleRecyclerViewItemArrayList);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        recyclerView.setAdapter(editTextInRecyclerViewAdapter);
-        //recyclerView.setItemViewCacheSize(simpleRecyclerViewItemArrayList.size());
-
+        recyclerView.setAdapter(parentMultiLevelAdapter);
     }
 }

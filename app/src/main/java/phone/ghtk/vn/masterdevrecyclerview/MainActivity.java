@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
     mArrayList.add("RecyclerView In ScrollView");
     mArrayList.add("EditText In RecyclerView");
     mArrayList.add("Drag and Swipe");
+    mArrayList.add("Expandable RecyclerView");
     ArrayAdapter<String> stringArrayAdapter = new ArrayAdapter<String>(this, R.layout.support_simple_spinner_dropdown_item, mArrayList);
     stringArrayAdapter.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
     mSpnView.setAdapter(stringArrayAdapter);
@@ -49,6 +50,11 @@ public class MainActivity extends AppCompatActivity {
                   Intent intent3 = new Intent(MainActivity.this, DragSwipeActivity.class);
                   startActivity(intent3);
                   break;
+              case 5 :
+                  Intent intent4 = new Intent(MainActivity.this, MultiLevelActivity.class);
+                  startActivity(intent4);
+                  break;
+
           }
       }
       @Override
