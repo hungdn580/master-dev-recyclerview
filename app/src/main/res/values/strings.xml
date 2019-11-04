@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">MasterDevRecyclerView</string>
+    <string name="label"> RecyclerView</string>
+    <string name="mode"> RecyclerView Mode</string>
+    <string name="start"> Start</string>
+    <string-array name="arr_list_mode">
+        <item> RecyclerView with 1000 item</item>
+        <item> RecyclerView in ScrollView</item>
+        <item> RecyclerView in RecyclerView</item>
+        <item> EditText in RecyclerView </item>
+        <item> RecyclerView implement Drag and Swipe</item>
+    </string-array>
 </resources>
