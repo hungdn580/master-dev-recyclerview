@@ -10,15 +10,16 @@ import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import phone.ghtk.vn.masterdevrecyclerview.R;
 
 public class EditTextRecyclerViewAdapter extends RecyclerView.Adapter <EditTextRecyclerViewAdapter.RecyclerViewHolder> {
     private Context mContext;
-    private List <String> data;
+    public ArrayList <String> data;
 
-    public EditTextRecyclerViewAdapter (Context mContext, List <String> data) {
+    public EditTextRecyclerViewAdapter (Context mContext, ArrayList <String> data) {
         this.mContext = mContext;
         this.data = data;
     }
@@ -40,7 +41,7 @@ public class EditTextRecyclerViewAdapter extends RecyclerView.Adapter <EditTextR
 
             @Override
             public void onTextChanged (CharSequence s, int start, int before, int count) {
-//                data.get (position) = s.toString ();
+
             }
             @Override
             public void afterTextChanged (Editable s) {
@@ -60,6 +61,26 @@ public class EditTextRecyclerViewAdapter extends RecyclerView.Adapter <EditTextR
             super(itemView);
             editText = (EditText) itemView.findViewById(R.id.edittext);
             linear = (LinearLayout) itemView.findViewById(R.id.linear);
+            editText.addTextChangedListener (new TextWatcher () {
+                @Override
+                public void beforeTextChanged (CharSequence s, int start, int count, int after) {
+
+                }
+
+                @Override
+                public void onTextChanged (CharSequence s, int start, int before, int count) {
+
+
+
+
+
+                }
+
+                @Override
+                public void afterTextChanged (Editable s) {
+
+                }
+            });
         }
 
 

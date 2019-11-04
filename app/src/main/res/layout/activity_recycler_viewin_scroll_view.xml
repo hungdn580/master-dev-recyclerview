@@ -8,13 +8,20 @@
     tools:context=".RecyclerViewinScrollViewActivity">
     <android.support.v4.widget.NestedScrollView
         android:layout_width="match_parent"
+        android:id="@+id/nesScroll"
         android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="horizontal">
-
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="NestedScrollView"
+                android:textStyle="bold"
+                android:textSize="30dp"
+                android:layout_gravity="center"/>
             <android.support.v7.widget.RecyclerView
                 android:id="@+id/listRecyclerView"
                 android:layout_width="match_parent"
