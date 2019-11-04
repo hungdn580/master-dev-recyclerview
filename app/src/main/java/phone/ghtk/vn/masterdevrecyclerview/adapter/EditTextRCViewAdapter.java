@@ -1,6 +1,7 @@
-package com.example.rcviewapp.adapter;
+package phone.ghtk.vn.masterdevrecyclerview.adapter;
 
 import android.content.Context;
+import android.support.v7.widget.RecyclerView;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.LayoutInflater;
@@ -8,10 +9,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
 
-import androidx.annotation.NonNull;
-import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.rcviewapp.data.Items;
+import phone.ghtk.vn.masterdevrecyclerview.data.Items;
 import com.example.rcviewapp.R;
 
 import java.util.ArrayList;
@@ -25,16 +24,15 @@ public class EditTextRCViewAdapter extends RecyclerView.Adapter<EditTextRCViewAd
         this.items = items;
     }
 
-    @NonNull
     @Override
-    public ViewHoler onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public ViewHoler onCreateViewHolder( ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(context);
         View view = inflater.inflate(R.layout.edit_text_items, parent, false);
         return new ViewHoler(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHoler holder, int position) {
+    public void onBindViewHolder( ViewHoler holder, int position) {
          Items i = items.get(position);
          holder.editText.setText(i.getName());
          holder.editText.addTextChangedListener(new TextWatcher() {
@@ -62,7 +60,7 @@ public class EditTextRCViewAdapter extends RecyclerView.Adapter<EditTextRCViewAd
 
     public class ViewHoler extends RecyclerView.ViewHolder {
         EditText editText;
-        public ViewHoler(@NonNull View itemView) {
+        public ViewHoler( View itemView) {
             super(itemView);
             editText = (EditText)itemView.findViewById(R.id.editTextItem);
 

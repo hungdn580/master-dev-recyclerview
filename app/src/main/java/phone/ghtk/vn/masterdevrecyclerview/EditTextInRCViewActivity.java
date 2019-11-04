@@ -1,13 +1,15 @@
-package com.example.rcviewapp;
+package phone.ghtk.vn.masterdevrecyclerview;
 
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.rcviewapp.adapter.EditTextRCViewAdapter;
-import com.example.rcviewapp.data.Items;
+
+import com.example.rcviewapp.R;
+import phone.ghtk.vn.masterdevrecyclerview.adapter.EditTextRCViewAdapter;
+import phone.ghtk.vn.masterdevrecyclerview.data.Items;
 
 import java.util.ArrayList;
 

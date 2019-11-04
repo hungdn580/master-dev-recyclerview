@@ -1,17 +1,15 @@
-package com.example.rcviewapp.adapter;
+package phone.ghtk.vn.masterdevrecyclerview.adapter;
 
 import android.content.Context;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import androidx.annotation.NonNull;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
-import com.example.rcviewapp.data.BigItems;
-import com.example.rcviewapp.data.Items;
+import phone.ghtk.vn.masterdevrecyclerview.data.BigItems;
+import phone.ghtk.vn.masterdevrecyclerview.data.Items;
 import com.example.rcviewapp.R;
 
 import java.util.ArrayList;
@@ -26,16 +24,16 @@ public class BigAdapter extends RecyclerView.Adapter<BigAdapter.ViewHoler> {
         this.bigItems = bigItems;
     }
 
-    @NonNull
+
     @Override
-    public ViewHoler onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public ViewHoler onCreateViewHolder( ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(mcontext);
         View view = inflater.inflate(R.layout.item_big_rc_view, parent, false);
         return new ViewHoler(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHoler holder, int position) {
+    public void onBindViewHolder( ViewHoler holder, int position) {
         LinearLayoutManager layoutManager = new LinearLayoutManager(mcontext, RecyclerView.VERTICAL, false);
         smallItems = new ArrayList<>();
         for (int i=0;i<10;i++){
@@ -56,7 +54,7 @@ public class BigAdapter extends RecyclerView.Adapter<BigAdapter.ViewHoler> {
     public class ViewHoler extends RecyclerView.ViewHolder {
         TextView title;
         RecyclerView recyclerView;
-        public ViewHoler(@NonNull View itemView) {
+        public ViewHoler( View itemView) {
             super(itemView);
             title = itemView.findViewById(R.id.titleBigRCView);
             recyclerView = itemView.findViewById(R.id.bigRCView);

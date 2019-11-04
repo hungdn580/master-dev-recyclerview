@@ -16,16 +16,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SimpleRCViewActivity">
+        <activity android:name="phone.ghtk.vn.masterdevrecyclerview.SimpleRCViewActivity">
 
         </activity>
-        <activity android:name=".TwoRCViewActivity">
+        <activity android:name="phone.ghtk.vn.masterdevrecyclerview.TwoRCViewActivity">
 
         </activity>
-        <activity android:name=".RCViewInScrollViewActivity">
+        <activity android:name="phone.ghtk.vn.masterdevrecyclerview.RCViewInScrollViewActivity">
 
         </activity>
-        <activity android:name=".EditTextInRCViewActivity">
+        <activity android:name="phone.ghtk.vn.masterdevrecyclerview.EditTextInRCViewActivity">
 
         </activity>
     </application>

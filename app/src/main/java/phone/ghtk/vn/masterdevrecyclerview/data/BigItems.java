@@ -1,4 +1,4 @@
-package com.example.rcviewapp.data;
+package phone.ghtk.vn.masterdevrecyclerview.data;
 
 public class BigItems {
     private String bigitems;
