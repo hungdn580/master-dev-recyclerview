@@ -1,4 +1,4 @@
-package com.example.rcviewappp;
+package com.example.rcviewapp.data;
 
 public class Items {
     private String name;
@@ -7,11 +7,11 @@ public class Items {
         this.name = name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public String getName() {
         return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 }
